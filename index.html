@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+	<link rel="icon" href="assets/ico/logo.png" sizes="16x16" type="image/png">
+	<meta name="author" content="Strange">
+	<meta name="description" content="Simple Dictionary app on the app">
+</head>
+<body>
+	
+	<div class="wrapper" id="wrapper">
+		<header>
+			English Dictionary
+		</header>
+		<div class="search">
+			<input type="text" placeholder="Search a word" required id="input">
+			<i class="fas fa-search"></i>
+			<span class="material-icons" id="clear">close</span>
+		</div>
+		<p class="info-text" id="iText">Type a word and press enter to see results</p>
+		<ul>
+			<li class="word">
+				<div class="details">
+					<p id="word">**</p>
+					<span id="phonetics">__</span>
+				</div>
+				<i class="fas fa-volume-up" id="vol"></i>
+			</li>
+			<div class="content">
+				<li class="meaning">
+					<div class="details">
+						<p>Meaning</p>
+						<span id="meaning">__</span>
+					</div>
+				</li>
+				<li class="Example">
+					<div class="details">
+						<p>Example</p>
+						<span id="exp">__</span>
+					</div>
+				</li>
+				<li class="synonyms">
+					<div class="details" >
+						<p>Synonyms</p>
+	                  	<div class="list" id="list"></div>
+					</div>
+				</li>
+			</div>
+		</ul>
+	</div>
+	<script src="https://cdn.jsdelivr.net/gh/Strange-bs/strange-js/js/strange.js"></script>
+	<script src="assets/js/main.js"></script>
+</body>
+</html>
