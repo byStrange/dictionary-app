@@ -47,7 +47,60 @@ function search(txt) {
     $input.value = txt;
     fethApi(txt)
 }
-
+wrapper.css({background: '#151515'});
+        $h.css('color','#fff')
+        p = document.querySelectorAll('.wrapper > ul p');
+        for(each of p) {
+            each.css('color', '#fff')
+        }
+$dark.on('change', e => {
+    if($dark.checked) {
+        $bounce.remov('active');
+        $toggler.css('background', '#151515');
+        wrapper.css({background: '#151515'});
+        $h.css('color','#fff')
+        p = document.querySelectorAll('.wrapper > ul p');
+        for(each of p) {
+            each.css('color', '#fff')
+        }
+    }
+})
+$light.on('change', e => {
+    if($light.checked) {
+        $bounce.add('active');
+        $toggler.css({background: '#f9f9f9'})
+    }
+    wrapper.css({background: '#fff'});
+        $h.css('color','#000')
+        p = document.querySelectorAll('.wrapper > ul p');
+        for(each of p) {
+            each.css('color', '#000')
+        }
+})
+$toggler.on('click', e => {
+    if($light.checked) {
+        $dark.checked = true;
+        $toggler.css('background', '#151515')
+        $bounce.remov('active');
+        wrapper.css({background: '#151515'});
+        $h.css('color','#fff')
+        p = document.querySelectorAll('.wrapper > ul p');
+        for(each of p) {
+            each.css('color', '#fff')
+        }
+    }
+    else {
+        $light.checked = true;
+        $toggler.css({background: '#f9f9f9'})
+        $bounce.add('active');
+        wrapper.css({background: '#fff'});
+        $h.css('color','#000')
+        p = document.querySelectorAll('.wrapper > ul p');
+        for(each of p) {
+            each.css('color', '#000')
+        }
+    }
+})
 function fethApi(txt) {
     infoText.css('color', '#000');
     infoText.html(`Searching the meaning of <span style="font-weight: 600">${txt}</span>`);

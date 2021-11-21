@@ -12,8 +12,17 @@
 	<meta name="description" content="Simple Dictionary app on the web">
 </head>
 <body>
+	<div class="theme">
+		<label for="dark">Dark</label> 
+		<input type="radio" style="display: none;" id="dark" name="dark">
+		<div class="range" id="toggler">
+			<div class="bounce" id="bounce"></div>
+		</div>
+		<label for="light">Light</label>
+		<input type="radio"  id="light" name="dark" style="display: none;">
+	</div>
 	<div class="wrapper" id="wrapper">
-		<header>
+		<header id="h">
 			English Dictionary
 		</header>
 		<div class="search">
