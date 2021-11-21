@@ -62,3 +62,4 @@ searchInput.on('keyup', e => {
         fethApi(e.target.value)
     }
 })
+log('%cHi', 'font-size:50px')
