@@ -28,7 +28,7 @@ function data(res, txt) {
         } else {
             $list.parentElement.css('display', 'block')
             for (i = 0; i < 5; i++) {
-                tag = `<span onclick="search('${defs.synonyms[i]}')">${defs.synonyms[i]}</span>` + ', ';
+                tag = ` <span onclick="search('${defs.synonyms[i]}')">${defs.synonyms[i]}</span>` + '<b style="color:gray">,</b>';
                 $list.innerHTML += tag;
             }
         }
@@ -65,6 +65,7 @@ $dark.on('change', e => {
             each.css('color', '#fff')
         }
         infoText.css('color', '#fff')
+        document.body.css('background', '#212121')
     }
 })
 $light.on('change', e => {
@@ -78,7 +79,8 @@ $light.on('change', e => {
         for(each of p) {
             each.css('color', '#000')
         }
-        infoText.css('color', '#9a9a9a')
+        infoText.css('color', '#9a9a9a');
+        document.body.css('background', '#fff')
 
 })
 $toggler.on('click', e => {
@@ -93,6 +95,7 @@ $toggler.on('click', e => {
             each.css('color', '#fff')
         }
         infoText.css('color', '#fff')
+        document.body.css('background', '#212121')
     }
     else {
         $light.checked = true;
@@ -105,6 +108,7 @@ $toggler.on('click', e => {
             each.css('color', '#000')
         }
         infoText.css('color', '#9a9a9a')
+        document.body.css('background', '#fff')
     }
 })
 function fethApi(txt) {
