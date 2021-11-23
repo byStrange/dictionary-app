@@ -33,7 +33,6 @@ function data(res, txt) {
             }
         }
         wrapper.add('active');
-        console.log(res)
     }
 }
 $clear.on('click', e => {
