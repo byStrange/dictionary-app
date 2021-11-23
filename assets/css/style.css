@@ -172,3 +172,9 @@ ul .word i {
 	margin-right: 5px;
 	text-decoration: underline;
 }
+@media (min-width: 320px) and (max-width: 480px) {
+  div.wrapper {
+  	width: 100%;
+  }
+  
+}

@@ -33,11 +33,12 @@ function data(res, txt) {
             }
         }
         wrapper.add('active');
+        console.log(res)
     }
 }
 $clear.on('click', e => {
 	$input.value = '';
-	infoText.text('...')
+	infoText.text('Type a word and press enter to see results')
 	wrapper.remov('active');
 })
 function play() {
@@ -63,6 +64,7 @@ $dark.on('change', e => {
         for(each of p) {
             each.css('color', '#fff')
         }
+        infoText.css('color', '#fff')
     }
 })
 $light.on('change', e => {
@@ -76,6 +78,8 @@ $light.on('change', e => {
         for(each of p) {
             each.css('color', '#000')
         }
+        infoText.css('color', '#9a9a9a')
+
 })
 $toggler.on('click', e => {
     if($light.checked) {
@@ -88,6 +92,7 @@ $toggler.on('click', e => {
         for(each of p) {
             each.css('color', '#fff')
         }
+        infoText.css('color', '#fff')
     }
     else {
         $light.checked = true;
@@ -99,6 +104,7 @@ $toggler.on('click', e => {
         for(each of p) {
             each.css('color', '#000')
         }
+        infoText.css('color', '#9a9a9a')
     }
 })
 function fethApi(txt) {
