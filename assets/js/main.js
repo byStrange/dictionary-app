@@ -32,13 +32,13 @@ function data(res, txt) {
                 $list.innerHTML += tag;
             }
         }
-        wrapper.add('active');
+        wrapper.Add('active');
     }
 }
 $clear.on('click', e => {
 	$input.value = '';
 	infoText.text('Type a word and press enter to see results')
-	wrapper.remov('active');
+	wrapper.Remove('active');
 })
 function play() {
 	audio.play()
@@ -55,7 +55,7 @@ wrapper.css({background: '#151515'});
         }
 $dark.on('change', e => {
     if($dark.checked) {
-        $bounce.remov('active');
+        $bounce.Remove('active');
         $toggler.css('background', '#151515');
         wrapper.css({background: '#151515'});
         $h.css('color','#fff')
@@ -69,7 +69,7 @@ $dark.on('change', e => {
 })
 $light.on('change', e => {
     if($light.checked) {
-        $bounce.add('active');
+        $bounce.Add('active');
         $toggler.css({background: '#f9f9f9'})
     }
     wrapper.css({background: '#fff'});
@@ -86,7 +86,7 @@ $toggler.on('click', e => {
     if($light.checked) {
         $dark.checked = true;
         $toggler.css('background', '#151515')
-        $bounce.remov('active');
+        $bounce.Remove('active');
         wrapper.css({background: '#151515'});
         $h.css('color','#fff')
         p = document.querySelectorAll('.wrapper > ul p');
@@ -99,7 +99,7 @@ $toggler.on('click', e => {
     else {
         $light.checked = true;
         $toggler.css({background: '#f9f9f9'})
-        $bounce.add('active');
+        $bounce.Add('active');
         wrapper.css({background: '#fff'});
         $h.css('color','#000')
         p = document.querySelectorAll('.wrapper > ul p');
