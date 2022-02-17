@@ -28,7 +28,7 @@ function data(res, txt) {
         } else {
             $list.parentElement.css('display', 'block')
             for (i = 0; i < 5; i++) {
-                tag = ` <span onclick="search('${defs.synonyms[i]}')">${defs.synonyms[i]}</span>` + '<b style="color:gray">,</b>';
+                tag = ` <span onclick="search('${defs.synonyms[i]}')">${defs.synonyms[i]}</span>` + '<span style="color:gray">,</span>';
                 $list.innerHTML += tag;
             }
         }
