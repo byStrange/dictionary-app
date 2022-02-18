@@ -114,7 +114,9 @@ function fethApi(txt) {
     infoText.css('color', '#000');
     infoText.html(`Searching the meaning of <span style="font-weight: 600">${txt}</span>`);
     url = `https://api.dictionaryapi.dev/api/v2/entries/en/${txt}`;
-    fetch(url).then(response => response.json()).then(response => {
+    	console.log(url )
+	fetch(url).then(response => response.json()).then(response => {
+	    console.log(response)
         data(response, txt)
     })
 }
