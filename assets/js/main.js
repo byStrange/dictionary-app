@@ -15,7 +15,8 @@ function data(res, txt) {
         $exp.text(defs.example);
         $list.innerHTML = '';
         if (res[0].phonetics[0].audio != undefined) {
-            audio = new Audio('https:' + res[0].phonetics[0].audio);
+                console.log('https:' + res[0].phonetics[0].audio)
+		audio = new Audio('https:' + res[0].phonetics[0].audio);
         	$vol.css('opacity',1);
         	$vol.on('click', play)
         }
